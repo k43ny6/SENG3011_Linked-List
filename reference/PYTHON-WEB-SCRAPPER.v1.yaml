@@ -2,7 +2,10 @@ openapi: 3.0.0
 info:
   title: PYTHON WEB SCRAPPER
   version: '1.0'
-  description: Linked List's API DOCUMENTATION
+  description: |-
+    Linked List's API DOCUMENTATION
+
+    Will figure out 
 servers:
   - url: 'http://localhost:3000'
 paths:
@@ -15,7 +18,7 @@ paths:
         required: true
         description: Id of an existing user.
     get:
-      summary: Get User Info by User ID
+      summary: ''
       tags: []
       responses:
         '200':
@@ -188,3 +191,12 @@ components:
         - email
         - emailVerified
   securitySchemes: {}
+  responses:
+    BAD_REQUEST:
+      description: ''
+      content:
+        application/json:
+          schema:
+            properties:
+              id:
+                type: string
